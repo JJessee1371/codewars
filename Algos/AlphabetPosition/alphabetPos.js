@@ -1,10 +1,14 @@
 //My solution
 function alphabetPosition(text) {
     const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
-    const textArr = text.toLowerCase().split('');
+    // const textArr = text.toLowerCase().split('');
     let result = [];
 
-    textArr.filter(char => alphabet.indexOf(char) !== -1).forEach(char => {
+    text
+    .toLowerCase()
+    .split('')
+    .filter(char => alphabet.indexOf(char) !== -1)
+    .forEach(char => {
         result.push(alphabet.indexOf(char) + 1);
     });
     return result.join(' ');
